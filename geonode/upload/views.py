@@ -611,7 +611,7 @@ def final_step_view(req, upload_session):
                         'status': 'pending',
                         'success': True,
                         'id': import_session.id,
-                        'redirect_to': f"/upload/final?id={import_session.id}{force_ajax}"
+                        'redirect_to': f'{reverse("data_upload", args=["final"])}?id={import_session.id}{force_ajax}'
                     }
                 )
             except Exception as e:
