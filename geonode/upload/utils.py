@@ -293,6 +293,7 @@ def next_step_response(req, upload_session, force_ajax=True):
             upload_session.completed_step = 'save'
 
     next = get_next_step(upload_session)
+    redirect_to = f'{reverse("data_upload", args=[next])}?id={import_session.id}{_force_ajax}'
 
     if next == 'error':
         return json_response(
@@ -317,7 +318,7 @@ def next_step_response(req, upload_session, force_ajax=True):
              'status': 'incomplete',
              'success': True,
              'id': import_session.id,
-             'redirect_to': f"{reverse('data_upload', next)}?id={import_session.id}{_force_ajax}",
+             'redirect_to': redirect_to,
              }
         )
 
@@ -342,7 +343,7 @@ def next_step_response(req, upload_session, force_ajax=True):
              'status': 'incomplete',
              'success': True,
              'id': import_session.id,
-             'redirect_to': f"{reverse('data_upload', next)}?id={import_session.id}{_force_ajax}",
+             'redirect_to': redirect_to,
              }
         )
 
@@ -353,7 +354,7 @@ def next_step_response(req, upload_session, force_ajax=True):
              'status': 'incomplete',
              'success': True,
              'id': import_session.id,
-             'redirect_to': f"{reverse('data_upload', next)}?id={import_session.id}{_force_ajax}",
+             'redirect_to': redirect_to,
              }
         )
 
@@ -364,7 +365,7 @@ def next_step_response(req, upload_session, force_ajax=True):
              'status': 'incomplete',
              'success': True,
              'id': import_session.id,
-             'redirect_to': f"{reverse('data_upload', next)}?id={import_session.id}{_force_ajax}",
+             'redirect_to': redirect_to,
              }
         )
 
@@ -375,7 +376,7 @@ def next_step_response(req, upload_session, force_ajax=True):
              'status': 'incomplete',
              'success': True,
              'id': import_session.id,
-             'redirect_to': f"{reverse('data_upload', next)}?id={import_session.id}{_force_ajax}",
+             'redirect_to': redirect_to,
              }
         )
 
