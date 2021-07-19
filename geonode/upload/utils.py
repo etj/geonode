@@ -317,7 +317,7 @@ def next_step_response(req, upload_session, force_ajax=True):
              'status': 'incomplete',
              'success': True,
              'id': import_session.id,
-             'redirect_to': f"{settings.SITEURL}upload/check?id={import_session.id}{_force_ajax}",
+             'redirect_to': f"{reverse('data_upload', next)}?id={import_session.id}{_force_ajax}",
              }
         )
 
@@ -342,7 +342,7 @@ def next_step_response(req, upload_session, force_ajax=True):
              'status': 'incomplete',
              'success': True,
              'id': import_session.id,
-             'redirect_to': f"{settings.SITEURL}upload/time?id={import_session.id}{_force_ajax}",
+             'redirect_to': f"{reverse('data_upload', next)}?id={import_session.id}{_force_ajax}",
              }
         )
 
@@ -353,7 +353,7 @@ def next_step_response(req, upload_session, force_ajax=True):
              'status': 'incomplete',
              'success': True,
              'id': import_session.id,
-             'redirect_to': f"{settings.SITEURL}upload/mosaic?id={import_session.id}{_force_ajax}",
+             'redirect_to': f"{reverse('data_upload', next)}?id={import_session.id}{_force_ajax}",
              }
         )
 
@@ -364,7 +364,7 @@ def next_step_response(req, upload_session, force_ajax=True):
              'status': 'incomplete',
              'success': True,
              'id': import_session.id,
-             'redirect_to': f"{settings.SITEURL}upload/srs?id={import_session.id}{_force_ajax}",
+             'redirect_to': f"{reverse('data_upload', next)}?id={import_session.id}{_force_ajax}",
              }
         )
 
@@ -375,7 +375,7 @@ def next_step_response(req, upload_session, force_ajax=True):
              'status': 'incomplete',
              'success': True,
              'id': import_session.id,
-             'redirect_to': f"{settings.SITEURL}upload/csv?id={import_session.id}{_force_ajax}",
+             'redirect_to': f"{reverse('data_upload', next)}?id={import_session.id}{_force_ajax}",
              }
         )
 
